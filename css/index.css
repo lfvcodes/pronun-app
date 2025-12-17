@@ -1,0 +1,201 @@
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3a0ca3;
+    --accent-color: #4cc9f0;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7ff;
+    color: var(--dark-color);
+    padding-bottom: 50px;
+}
+
+.header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+.rule-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    border-left: 5px solid var(--primary-color);
+}
+
+.rule-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rule-title {
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.rule-examples {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.practice-section {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 2rem;
+}
+
+.word-card {
+    background-color: #f8f9ff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #e6e9ff;
+}
+
+.spanish-word {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.english-hint {
+    font-size: 1.1rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.suggestions {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.suggestion-item:hover {
+    background-color: #f8f9fa;
+}
+
+.result {
+    margin-top: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.correct {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #27ae60;
+    border-left: 4px solid #2ecc71;
+}
+
+.incorrect {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #c0392b;
+    border-left: 4px solid #e74c3c;
+}
+
+.hint {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.progress-section {
+    margin-top: 2rem;
+}
+
+.progress {
+    height: 20px;
+    margin-bottom: 1rem;
+}
+
+.stats {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.phonetic-guide {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.action-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.action-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .rule-card {
+        padding: 1rem;
+    }
+
+    .practice-section {
+        padding: 1.5rem;
+    }
+
+    .spanish-word {
+        font-size: 1.3rem;
+    }
+}

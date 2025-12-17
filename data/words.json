@@ -1,0 +1,248 @@
+[
+    {
+        "spanish": "ver",
+        "english": "see",
+        "phonetic": "si",
+        "rule": "EE → I"
+    },
+    {
+        "spanish": "calle",
+        "english": "street",
+        "phonetic": "strit",
+        "rule": "EE → I"
+    },
+    {
+        "spanish": "pies",
+        "english": "feet",
+        "phonetic": "fit",
+        "rule": "EE → I"
+    },
+    {
+        "spanish": "dije",
+        "english": "said",
+        "phonetic": "sed",
+        "rule": "AI → E"
+    },
+    {
+        "spanish": "aire",
+        "english": "air",
+        "phonetic": "er",
+        "rule": "AI → E"
+    },
+    {
+        "spanish": "silla",
+        "english": "chair",
+        "phonetic": "cher",
+        "rule": "AI → E"
+    },
+    {
+        "spanish": "sierra",
+        "english": "saw",
+        "phonetic": "so",
+        "rule": "AW → O"
+    },
+    {
+        "spanish": "dibujar",
+        "english": "draw",
+        "phonetic": "dro",
+        "rule": "AW → O"
+    },
+    {
+        "spanish": "ley",
+        "english": "law",
+        "phonetic": "lo",
+        "rule": "AW → O"
+    },
+    {
+        "spanish": "noche",
+        "english": "night",
+        "phonetic": "nait",
+        "rule": "IGH → AI"
+    },
+    {
+        "spanish": "luz",
+        "english": "light",
+        "phonetic": "lait",
+        "rule": "IGH → AI"
+    },
+    {
+        "spanish": "derecha",
+        "english": "right",
+        "phonetic": "rait",
+        "rule": "IGH → AI"
+    },
+    {
+        "spanish": "luna",
+        "english": "moon",
+        "phonetic": "mun",
+        "rule": "OO → U"
+    },
+    {
+        "spanish": "habitación",
+        "english": "room",
+        "phonetic": "rum",
+        "rule": "OO → U"
+    },
+    {
+        "spanish": "cocinar",
+        "english": "cook",
+        "phonetic": "cuk",
+        "rule": "OO → U"
+    },
+    {
+        "spanish": "contar",
+        "english": "count",
+        "phonetic": "kaunt",
+        "rule": "OU → AU"
+    },
+    {
+        "spanish": "sonido",
+        "english": "sound",
+        "phonetic": "saund",
+        "rule": "OU → AU"
+    },
+    {
+        "spanish": "nube",
+        "english": "cloud",
+        "phonetic": "klaud",
+        "rule": "OU → AU"
+    },
+    {
+        "spanish": "té",
+        "english": "tea",
+        "phonetic": "ti",
+        "rule": "EA → I"
+    },
+    {
+        "spanish": "carne",
+        "english": "meat",
+        "phonetic": "mit",
+        "rule": "EA → I"
+    },
+    {
+        "spanish": "comer",
+        "english": "eat",
+        "phonetic": "it",
+        "rule": "EA → I"
+    },
+    {
+        "spanish": "árbol",
+        "english": "tree",
+        "phonetic": "tri",
+        "rule": "EE → I"
+    },
+    {
+        "spanish": "abeja",
+        "english": "bee",
+        "phonetic": "bi",
+        "rule": "EE → I"
+    },
+    {
+        "spanish": "queso",
+        "english": "cheese",
+        "phonetic": "chis",
+        "rule": "EE → I"
+    },
+    {
+        "spanish": "tres",
+        "english": "three",
+        "phonetic": "zri",
+        "rule": "EE → I"
+    },
+    {
+        "spanish": "diente",
+        "english": "teeth",
+        "phonetic": "tiz",
+        "rule": "EE → I"
+    },
+    {
+        "spanish": "sueño",
+        "english": "sleep",
+        "phonetic": "slip",
+        "rule": "EE → I"
+    },
+    {
+        "spanish": "profundo",
+        "english": "deep",
+        "phonetic": "dip",
+        "rule": "EE → I"
+    },
+    {
+        "spanish": "mantener",
+        "english": "keep",
+        "phonetic": "kip",
+        "rule": "EE → I"
+    },
+    {
+        "spanish": "oveja",
+        "english": "sheep",
+        "phonetic": "ship",
+        "rule": "EE → I"
+    },
+    {
+        "spanish": "barato",
+        "english": "cheap",
+        "phonetic": "chip",
+        "rule": "EE → I"
+    },
+    {
+        "spanish": "lluvia",
+        "english": "rain",
+        "phonetic": "rein",
+        "rule": "AI → E"
+    },
+    {
+        "spanish": "dolor",
+        "english": "pain",
+        "phonetic": "pein",
+        "rule": "AI → E"
+    },
+    {
+        "spanish": "cerebro",
+        "english": "brain",
+        "phonetic": "brein",
+        "rule": "AI → E"
+    },
+    {
+        "spanish": "cadena",
+        "english": "chain",
+        "phonetic": "chein",
+        "rule": "AI → E"
+    },
+    {
+        "spanish": "avión",
+        "english": "plane",
+        "phonetic": "plein",
+        "rule": "AI → E"
+    },
+    {
+        "spanish": "explicar",
+        "english": "explain",
+        "phonetic": "eksplein",
+        "rule": "AI → E"
+    },
+    {
+        "spanish": "reparar",
+        "english": "repair",
+        "phonetic": "riper",
+        "rule": "AI → E"
+    },
+    {
+        "spanish": "par",
+        "english": "pair",
+        "phonetic": "per",
+        "rule": "AI → E"
+    },
+    {
+        "spanish": "escalera",
+        "english": "stair",
+        "phonetic": "ster",
+        "rule": "AI → E"
+    },
+    {
+        "spanish": "cabello",
+        "english": "hair",
+        "phonetic": "her",
+        "rule": "AI → E"
+    }
+]
