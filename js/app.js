@@ -8,7 +8,8 @@ let showPhonetic = false;
 
 const spanishWordElement = document.getElementById('spanishWord');
 const englishHintElement = document.getElementById('englishHint');
-const englishInputElement = document.getElementById('englishInput');
+const englishDisplayElement = document.getElementById('englishDisplay');
+const pronunciationInputElement = document.getElementById('pronunciationInput');
 const suggestionsElement = document.getElementById('suggestions');
 const resultElement = document.getElementById('result');
 const ruleHintElement = document.getElementById('ruleHint');
@@ -80,23 +81,25 @@ function loadWord() {
     const word = words[currentWordIndex];
 
     spanishWordElement.textContent = word.spanish;
+    englishDisplayElement.value = word.english;
 
+    // Reset hints
     if (showPhonetic) {
         englishHintElement.textContent = `Pronunciación: "${word.phonetic}"`;
     } else {
-        englishHintElement.textContent = `Pista: ${getHint(word.english)}`;
+        englishHintElement.textContent = ''; // Limpiar pista al cargar
     }
 
     ruleHintElement.textContent = `Regla aplicada: ${word.rule}`;
 
-    englishInputElement.value = '';
+    pronunciationInputElement.value = '';
     suggestionsElement.innerHTML = '';
     suggestionsElement.style.display = 'none';
     resultElement.className = 'result';
     resultElement.style.display = 'none';
 
     updateStats();
-    englishInputElement.focus();
+    pronunciationInputElement.focus();
 }
 
 function getHint(word) {
@@ -119,25 +122,24 @@ function getHint(word) {
 }
 
 function checkAnswer() {
-    const userAnswer = englishInputElement.value.trim().toLowerCase();
-    const correctAnswer = words[currentWordIndex].english.toLowerCase();
+    const userAnswer = pronunciationInputElement.value.trim().toLowerCase();
+    const correctPhonetic = words[currentWordIndex].phonetic.toLowerCase();
 
     resultElement.style.display = 'block';
 
-    if (userAnswer === correctAnswer) {
+    if (userAnswer === correctPhonetic) {
         resultElement.innerHTML = `
             <i class="fas fa-check-circle me-2"></i>
-            ¡Correcto! "${words[currentWordIndex].spanish}" en inglés es 
-            <strong>"${words[currentWordIndex].english}"</strong>
-            <div class="phonetic-guide mt-1">Pronunciación: ${words[currentWordIndex].phonetic}</div>
+            ¡Correcto! La pronunciación de <strong>"${words[currentWordIndex].english}"</strong> es 
+            <strong>"${words[currentWordIndex].phonetic}"</strong>
         `;
         resultElement.className = 'result correct';
         correctAnswers++;
     } else {
         resultElement.innerHTML = `
             <i class="fas fa-times-circle me-2"></i>
-            Incorrecto. La respuesta correcta es 
-            <strong>"${words[currentWordIndex].english}"</strong> (${words[currentWordIndex].phonetic})
+            Incorrecto. La pronunciación correcta es 
+            <strong>"${words[currentWordIndex].phonetic}"</strong>
             <div class="phonetic-guide mt-1">${words[currentWordIndex].rule}</div>
         `;
         resultElement.className = 'result incorrect';
@@ -191,19 +193,18 @@ function showSuggestions() {
 }
 
 // Función para mostrar/ocultar pronunciación
+// Función para mostrar/ocultar pronunciación (respuesta)
 function togglePhonetic() {
     showPhonetic = !showPhonetic;
 
     if (showPhonetic) {
-        phoneticBtn.innerHTML = '<i class="fas fa-eye-slash me-1"></i>Ocultar pronunciación';
+        phoneticBtn.innerHTML = '<i class="fas fa-eye-slash me-1"></i>Ocultar respuesta';
         if (words[currentWordIndex]) {
-            englishHintElement.textContent = `Pronunciación: "${words[currentWordIndex].phonetic}"`;
+            englishHintElement.textContent = `Respuesta: "${words[currentWordIndex].phonetic}"`;
         }
     } else {
-        phoneticBtn.innerHTML = '<i class="fas fa-volume-up me-1"></i>Mostrar pronunciación';
-        if (words[currentWordIndex]) {
-            englishHintElement.textContent = `Pista: ${getHint(words[currentWordIndex].english)}`;
-        }
+        phoneticBtn.innerHTML = '<i class="fas fa-volume-up me-1"></i>Mostrar respuesta';
+        englishHintElement.textContent = '';
     }
 }
 
@@ -217,26 +218,30 @@ nextBtn.addEventListener('click', function () {
 
 hintBtn.addEventListener('click', function () {
     if (words[currentWordIndex]) {
-        const hint = getHint(words[currentWordIndex].english);
+        // Pista para la fonética
+        const hint = getHint(words[currentWordIndex].phonetic);
         englishHintElement.textContent = `Pista: ${hint}`;
     }
 });
 
 phoneticBtn.addEventListener('click', togglePhonetic);
 
-englishInputElement.addEventListener('input', showSuggestions);
+// Note: Suggestions logic removed as it was for English words. Could re-implement for phonetics if needed.
+// pronunciationInputElement.addEventListener('input', showSuggestions);
 
-englishInputElement.addEventListener('keypress', function (e) {
+pronunciationInputElement.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         checkAnswer();
     }
 });
 
+/* 
 document.addEventListener('click', function (e) {
-    if (!suggestionsElement.contains(e.target) && e.target !== englishInputElement) {
+    if (!suggestionsElement.contains(e.target) && e.target !== pronunciationInputElement) {
         suggestionsElement.style.display = 'none';
     }
 });
+*/
 
 document.addEventListener('DOMContentLoaded', function () {
     loadWords();
